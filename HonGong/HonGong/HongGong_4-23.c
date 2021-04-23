@@ -331,53 +331,70 @@
 //	return a * b;
 //}
 
+//
+//void swap(char *, void*, void*);
+//
+//
+//int main()
+//{
+//
+//	// : source code
+//	int w1, w2;
+//	double h1, h2;
+//
+//
+//	printf("첫 번째 사람의 나이와 키 입력 : ");
+//	scanf("%d %lf", &w1, &h1);
+//	printf("두 번째 사람의 나이와 키 입력 : ");
+//	scanf("%d %lf", &w2, &h2);
+//
+//	swap("int", &w1, &w2);
+//	swap("double", &h1, &h2);
+//
+//	printf("첫 번째 사람의 나이와 키 : %d %.1lf\n", w1, h1);
+//	printf("두 번째 사람의 나이와 키 : %d %.1lf\n", w2, h2);
+//
+//
+//	
+//
+//
+//	return 0;
+//
+//
+//}
+//
+//
+//void swap(char *ch, void* a, void* b)
+//{
+//	if (ch == "int")
+//	{
+//		int temp = *(int *)a;
+//		*(int *)a = *((int *)b);
+//		*(int *)b = temp;
+//
+//	}
+//	else
+//	{
+//		double temp = *(double *)a;
+//		*(double *)a = *(double *)b;
+//		*(double *)b = temp;
+//	}
+//}
+//
 
-void swap(char *, void*, void*);
+
+
 
 
 int main()
 {
 
 	// : source code
-	int w1, w2;
-	double h1, h2;
 
 
-	printf("첫 번째 사람의 나이와 키 입력 : ");
-	scanf("%d %lf", &w1, &h1);
-	printf("두 번째 사람의 나이와 키 입력 : ");
-	scanf("%d %lf", &w2, &h2);
-
-	swap("int", &w1, &w2);
-	swap("double", &h1, &h2);
-
-	printf("첫 번째 사람의 나이와 키 : %d %.1lf\n", w1, h1);
-	printf("두 번째 사람의 나이와 키 : %d %.1lf\n", w2, h2);
-
-
-	
 
 
 	return 0;
 
 
 }
-
-
-void swap(char *ch, void* a, void* b)
-{
-	if (ch == "int")
-	{
-		int temp = *(int *)a;
-		*(int *)a = *((int *)b);
-		*(int *)b = temp;
-
-	}
-	else
-	{
-		double temp = *(double *)a;
-		*(double *)a = *(double *)b;
-		*(double *)b = temp;
-	}
-}
-
