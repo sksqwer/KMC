@@ -383,7 +383,135 @@
 //
 
 
+//
+//
+//
+//int main()
+//{
+//
+//	// : source code
+//
+//	int *pi;
+//	double *pd;
+//
+//	pi = (int*)malloc(sizeof(int));
+//	if (pi == NULL)
+//	{
+//		printf("# 메모리가 부족합니다. \n");
+//		exit(1);
+//	}
+//
+//	pd = (double*)malloc(sizeof(double));
+//
+//	*pi = 10;
+//	*pd = 3.4;
+//
+//	printf("정수형으로 사용 : %d\n", *pi);
+//	printf("실수형으로 사용 : %.1lf\n", *pd);
+//
+//	free(pi);
+//	free(pd);
+//
+//	return 0;
+//
+//
+//}
 
+//
+//
+//int main()
+//{
+//
+//	// : source code
+//
+//
+//	int *pi;
+//
+//	int i, sum = 0;
+//
+//	pi = (int *)malloc(5 * sizeof(int));
+//	if (pi == NULL)
+//	{
+//		printf("메모리가 부족합니다.\n");
+//		exit(0);
+//	}
+//
+//	printf("다섯 명의 나이를 입력하세요 : ");
+//	for (i = 0; i < 5; i++)
+//	{
+//		scanf("%d", &pi[i]);
+//		sum += pi[i];
+//	}
+//	printf("다섯명의 평균 나이 %.1lf", (sum / 5.0));
+//	free(pi);
+//
+//
+//
+//	return 0;
+//
+//
+//}
+
+//
+//
+//int main()
+//{
+//
+//	// : source code
+//
+//	int *pi;
+//	int size = 5;
+//	int count = 0;
+//	int num;
+//	int i;
+//	pi = (int *)calloc(size, sizeof(int));
+//	while (1)
+//	{
+//		printf("양수만 입력하세요 => ");
+//		scanf("%d", &num);
+//
+//		if (num <= 0) break;
+//		if (count == size)
+//		{
+//			size += 5;
+//			pi = (int *)realloc(pi, size * sizeof(int));
+//		}
+//		pi[count++] = num;
+//
+//
+//
+//	}
+//
+//
+//	for (i = 0; i < count; i++)
+//	{
+//		printf("%5d", pi[i]);
+//	}
+//
+//	free(pi);
+//
+//
+//	return 0;
+//
+//
+//}
+
+
+
+/*
+문3.
+	1. 사용자로부터 문자열을 입력받아서 출력하는 프로그램 작성.
+	문자열입력 받기전에  사용자로부터 문자열의 최대 길이에 대한 정보를 
+	먼저 입력받고, 그 길이 만큼 메모리 공간을 동적으로 할당해
+	문자열을 입력받아 출력하도록 한다.
+
+	특정 문자가 입력될 때까지 반복하도록 한다.
+	("Quit" - > 프로그램 종료)
+	2. 출력할때 다음과 같이 단어 단위로 문자열을 뒤집어 주도록 한다.
+	ex> I am happy
+		happt am I
+
+*/
 
 
 int main()
@@ -391,10 +519,81 @@ int main()
 
 	// : source code
 
+	int n;
+	char* str;
 
+
+	while (1)
+	{
+
+		printf("입력할 문자의 최대길이 입력 : ");
+		scanf("%d", &n);
+//		fgetc(stdin);
+		str = (char*)malloc((n+1) * sizeof(char));
+		
+		getchar();
+		printf("문자 입력 : ");
+		fgets(str, sizeof(char) * (n+1), stdin);
+		str[strlen(str) - 1] = '\0';
+		printf("%d", strlen(str));
+
+		while (getchar() != '\n');
+
+		printf("%s\n", str);
+
+		if (str == "Quit")
+			break;
+
+
+
+
+		free(str);
+
+
+	}
 
 
 	return 0;
 
 
 }
+
+
+
+//
+//int main()
+//{
+//
+//	// : source code
+//
+//	int n;
+//	char* str;
+//
+//
+//	while (1)
+//	{
+//
+//		printf("입력할 문자의 최대길이 입력 : ");
+//		scanf("%d", &n);
+//
+//		str = (char*)malloc(n * sizeof(char));
+//
+//		printf("문자 입력 : ");
+//		scanf(" %	s", str);
+//
+//		if (str == "Quit")
+//			break;
+//
+//		printf("%s", str);
+//
+//
+//		free(str);
+//
+//
+//	}
+//
+//
+//	return 0;
+//
+//
+//}
