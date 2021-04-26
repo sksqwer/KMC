@@ -18,5 +18,8 @@
     <ClCompile Include="HongGong_4-23.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="HongGong_4-27.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

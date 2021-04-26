@@ -519,7 +519,7 @@ int main()
 
 	// : source code
 
-	int n;
+	int n, size;
 	char* str;
 
 
@@ -528,21 +528,43 @@ int main()
 
 		printf("입력할 문자의 최대길이 입력 : ");
 		scanf("%d", &n);
-//		fgetc(stdin);
-		str = (char*)malloc((n+1) * sizeof(char));
-		
+		//		fgetc(stdin);
+		str = (char*)malloc((n + 1) * sizeof(char));
+
 		getchar();
 		printf("문자 입력 : ");
-		fgets(str, sizeof(char) * (n+1), stdin);
-		str[strlen(str) - 1] = '\0';
-		printf("%d", strlen(str));
+		fgets(str, sizeof(char) * (n + 1), stdin);
 
-		while (getchar() != '\n');
 
-		printf("%s\n", str);
 
-		if (str == "Quit")
+		if (strlen(str) < n || str[strlen(str) - 1] == '\n')
+			str[strlen(str) - 1] = 0;
+		else	while (getchar() != '\n');
+
+
+		if (strcmp(str, "Quit") == 0)
+		{
+			free(str);
 			break;
+		}
+
+		size = strlen(str);
+
+
+		for (int i = size - 1; i >= 0; i--)
+		{
+			if (str[i] == ' ')
+			{
+				printf("%s ", str + i + 1);
+				str[i] = 0;
+			}
+			else if (i == 0)
+				printf("%s\n", str);
+
+		}
+
+
+
 
 
 
@@ -557,8 +579,6 @@ int main()
 
 
 }
-
-
 
 //
 //int main()
