@@ -21,5 +21,20 @@
     <ClCompile Include="HongGong_4-27.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="문제1번.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="문제2번.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="문제3번.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="문제4번.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="문제5번.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
